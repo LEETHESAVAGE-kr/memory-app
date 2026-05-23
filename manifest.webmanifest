@@ -1,7 +1,7 @@
 {
   "name": "산업안전 암기장",
   "short_name": "암기장",
-  "description": "PDF 문제와 모범답안을 기반으로 만든 터치형 빈칸 암기 앱",
+  "description": "랜덤 출제와 오답노트가 있는 산업안전 빈칸 암기 앱",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
