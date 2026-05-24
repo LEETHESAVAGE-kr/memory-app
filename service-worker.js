@@ -1,5 +1,5 @@
 
-const CACHE_NAME = "memory-quiz-pwa-v3";
+const CACHE_NAME = "memory-quiz-pwa-v4-round";
 
 const APP_SHELL = [
   "./",

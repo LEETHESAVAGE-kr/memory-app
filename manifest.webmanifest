@@ -1,7 +1,7 @@
 {
   "name": "산업안전 암기장",
   "short_name": "암기장",
-  "description": "랜덤 출제와 오답노트가 있는 산업안전 빈칸 암기 앱",
+  "description": "랜덤 출제와 오답노트, 회차별 학습 기능이 있는 산업안전 빈칸 암기 앱",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
