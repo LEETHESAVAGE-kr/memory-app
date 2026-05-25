@@ -1,26 +1,21 @@
 {
   "name": "산업안전 암기장",
   "short_name": "암기장",
-  "description": "랜덤 출제와 오답노트, 회차별 학습 기능이 있는 산업안전 빈칸 암기 앱",
-  "start_url": "./index.html",
+  "start_url": "./index.html?v=9",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f5f5f5",
   "theme_color": "#111827",
-  "orientation": "portrait",
-  "lang": "ko-KR",
   "icons": [
     {
-      "src": "./icon-192.png",
+      "src": "./icon-192.png?v=9",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     },
     {
-      "src": "./icon-512.png",
+      "src": "./icon-512.png?v=9",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     }
   ]
 }

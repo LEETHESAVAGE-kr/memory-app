@@ -1,38 +1,18 @@
-
-const CACHE_NAME = "memory-quiz-pwa-v4-round";
-
-const APP_SHELL = [
-  "./",
-  "./index.html",
-  "./manifest.webmanifest",
-  "./icon-192.png",
-  "./icon-512.png"
-];
-
+const CACHE_NAME = "memory-quiz-v9-ios-safe";
+const APP_SHELL = ["./index.html?v=9", "./manifest.webmanifest?v=9", "./icon-192.png?v=9", "./icon-512.png?v=9"];
 self.addEventListener("install", event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL))
-  );
   self.skipWaiting();
 });
-
 self.addEventListener("activate", event => {
   event.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(
-        keys
-          .filter(key => key !== CACHE_NAME)
-          .map(key => caches.delete(key))
-      )
-    )
+    caches.keys().then(keys => Promise.all(keys.map(key => caches.delete(key))))
+      .then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
-
 self.addEventListener("fetch", event => {
+  const req = event.request;
+  if (req.method !== "GET") return;
   event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
-    })
+    fetch(req, { cache: "no-store" }).catch(() => caches.match(req))
   );
 });
